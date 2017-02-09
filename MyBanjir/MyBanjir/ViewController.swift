@@ -7,12 +7,39 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController {
 
+    var data = [] as [Any]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let apiURL = "https://banjir-api.herokuapp.com/api/v1/reports.json"
+        
+        Alamofire.request(apiURL).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                
+                let dict = value as! [String: Any?]
+                print(dict)
+                
+                let sections = dict["data"] as? [[String: Any]]
+                
+                for section in sections! {
+                    
+                    let banjirEntry = BanjirEntry.from(json: section)
+                    self.data.append(banjirEntry!)
+                    
+                }
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

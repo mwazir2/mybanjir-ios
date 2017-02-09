@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3C795131153CF905136D9498 /* Pods_MyBanjir.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1519D810BCE9FF604625D31 /* Pods_MyBanjir.framework */; };
+		67490A721E4CC18700D6492E /* DataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67490A711E4CC18700D6492E /* DataObject.swift */; };
 		676F011F1E4CBBD90056145D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F011E1E4CBBD90056145D /* AppDelegate.swift */; };
 		676F01211E4CBBD90056145D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F01201E4CBBD90056145D /* ViewController.swift */; };
 		676F01241E4CBBD90056145D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 676F01221E4CBBD90056145D /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		056699458BD72BF16315AAE7 /* Pods-MyBanjir.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBanjir.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyBanjir/Pods-MyBanjir.debug.xcconfig"; sourceTree = "<group>"; };
+		67490A711E4CC18700D6492E /* DataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataObject.swift; sourceTree = "<group>"; };
 		676F011B1E4CBBD90056145D /* MyBanjir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBanjir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		676F011E1E4CBBD90056145D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		676F01201E4CBBD90056145D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			children = (
 				676F011E1E4CBBD90056145D /* AppDelegate.swift */,
 				676F01201E4CBBD90056145D /* ViewController.swift */,
+				67490A711E4CC18700D6492E /* DataObject.swift */,
 				676F01221E4CBBD90056145D /* Main.storyboard */,
 				676F01251E4CBBD90056145D /* Assets.xcassets */,
 				676F01271E4CBBD90056145D /* LaunchScreen.storyboard */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				676F01211E4CBBD90056145D /* ViewController.swift in Sources */,
+				67490A721E4CC18700D6492E /* DataObject.swift in Sources */,
 				676F011F1E4CBBD90056145D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +381,7 @@
 				676F012F1E4CBBD90056145D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
