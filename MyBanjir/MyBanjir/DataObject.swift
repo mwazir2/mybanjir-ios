@@ -39,7 +39,8 @@ class BanjirEntry: NSObject {
                 return nil
         }
         
-        return BanjirEntry(parasAir: parasAir, namaLaluan: namaLaluan, daerah: daerah, negeri: negeri, dikemaskini: dikemaskini, status: status, googleMapsUrl: googleMapsUrl)
+            let parasAirWithSuffix = "\(parasAir)m"
+        return BanjirEntry(parasAir: parasAirWithSuffix, namaLaluan: namaLaluan, daerah: daerah, negeri: negeri, dikemaskini: dikemaskini, status: status, googleMapsUrl: googleMapsUrl)
         
     }
     
