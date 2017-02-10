@@ -8,4 +8,5 @@ target 'MyBanjir' do
   # Pods for MyBanjir
   pod 'SwiftyJSON'
   pod 'Alamofire', '~> 4.3'
+  pod 'YXWaveView'
 end

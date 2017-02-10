@@ -1,15 +1,18 @@
 PODS:
   - Alamofire (4.3.0)
   - SwiftyJSON (3.1.4)
+  - YXWaveView (0.4.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.3)
   - SwiftyJSON
+  - YXWaveView
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  YXWaveView: 57c411339d0adcd54c3443befadead8df9e12391
 
-PODFILE CHECKSUM: 90241e70066e0494e0d0d25aa00ef2d7ab93e236
+PODFILE CHECKSUM: 0a3b40aa7061f5fdd542cf48028749dd64693e01
 
 COCOAPODS: 1.1.1

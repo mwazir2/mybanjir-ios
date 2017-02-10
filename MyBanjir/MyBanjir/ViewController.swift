@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import YXWaveView
 
 class ViewController: UIViewController {
 
@@ -25,8 +26,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let apiURL = "https://banjir-api.herokuapp.com/api/v1/reports.json"
+        self.animateWave()
         
+        let apiURL = "https://banjir-api.herokuapp.com/api/v1/reports.json"
         
         Alamofire.request(apiURL).responseJSON { response in
             switch response.result {
@@ -50,23 +52,12 @@ class ViewController: UIViewController {
                 self.jalanLabel.text = self.data[0].namaLaluan
                 self.statusLabel.text = self.data[0].status
                 
+                
             case .failure(let error):
                 print(error)
             }
         }
  
-        
-        /*
-        Alamofire.request(apiURL, method: .get).validate().responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                print("JSON: \(json)")
-            case .failure(let error):
-                print(error)
-            }
-        }
-        */
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,6 +65,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func animateWave() {
+        let frame = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: 400)
+        let blueWaterColor = UIColor(red: (98/255), green: (143/255), blue: (193/255), alpha: 1.0)
+        let waterView = YXWaveView(frame: frame, color: blueWaterColor)
+        
+//        waterView.backgroundColor = UIColor(red: 248/255, green: 64/255, blue: 87/255, alpha: 1)
+        waterView.backgroundColor =  UIColor(red: (53/255), green: (80/255), blue: (121/255), alpha: 1.0)
+        self.view.insertSubview(waterView, at: 1)
+
+        waterView.addOverView(self.arasAirLabel)
+        
+        waterView.start()
+        
+    }
 
 }
 
